@@ -511,6 +511,9 @@ function swopResultsAndIngredients(old,new)
 		end
 		old.result = old.results[1][i1]
 		old.result_count = old.results[1][i2]
+		if old.result_count == nil then
+			old.result_count = 1
+		end
 	end
 	new.ingredients = { {old.result, old.result_count * recycleratio} }
 	
